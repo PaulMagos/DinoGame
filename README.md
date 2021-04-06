@@ -16,7 +16,7 @@
 <!-- ABOUT THE PROJECT -->
 ## About The Project
 <p align="center">
-<img src="Login.png" width="60%" height="60%" border-radius: 90%>
+<img src="Screen.png" width="60%" height="60%" border-radius: 90%>
 </p>
 
 This project has educational purpose only. It's made for the Computer Networks Laboratory course ad University of Pisa, by me Paul Magos.
