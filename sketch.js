@@ -37,7 +37,7 @@ function preload(){
 }
 
 function setup() {
-    cnv = createCanvas(1400,350);
+    cnv = createCanvas(windowWidth,350);
     cnv.style('display', 'block');
 
     dino = new Dino();
@@ -50,9 +50,9 @@ function touchStarted(){
 }
 
 function draw() {
-    scale(0.5);
+    //scale(0.5);
 
-    cnv.position(1200/4, 100,'fixed');
+    cnv.center();
 
     background(256);
     land.show();
