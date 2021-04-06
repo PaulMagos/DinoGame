@@ -1,4 +1,4 @@
-# DinoGame ==> Play [HERE](https://dino-game-paulmagos.vercel.app/)
+# DinoGame ==> [Play Here](https://dino-game-paulmagos.vercel.app/)
 <!-- TABLE OF CONTENTS -->
 <details open="open">
   <ol>
