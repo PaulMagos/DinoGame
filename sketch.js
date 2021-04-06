@@ -1,5 +1,6 @@
+let cnv;
+
 let dino;
-let cactus;
 let land;
 
 let dinoImg;
@@ -36,16 +37,19 @@ function preload(){
 }
 
 function setup() {
-    createCanvas(1200,350);
+    cnv = createCanvas(windowWidth,windowHeight/1.5);
+    cnv.style('display', 'block');
 
     dino = new Dino();
     land = new Land();
 }
 
 function draw() {
+    scale(0.5);
+
+    cnv.position(windowWidth/4, 100,'fixed');
 
     background(256);
-    scale(0.8);
     land.show();
     land.move();
 
