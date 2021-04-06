@@ -37,22 +37,21 @@ function preload(){
 }
 
 function setup() {
-    cnv = createCanvas(windowWidth,350);
-    cnv.style('display', 'block');
+    if(windowWidth<windowHeight) cnv = createCanvas(windowWidth*2, windowHeight*2);
+    else cnv = createCanvas(windowWidth-10, windowHeight-10);
 
     dino = new Dino();
     land = new Land();
 }
-
 
 function touchStarted(){
     dino.jump();
 }
 
 function draw() {
-    //scale(0.5);
-
-    cnv.center();
+    if(windowWidth<windowHeight){
+        scale(0.48);
+    }
 
     background(256);
     land.show();
