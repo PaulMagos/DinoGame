@@ -37,7 +37,7 @@ function preload(){
 }
 
 function setup() {
-    cnv = createCanvas(windowWidth,windowHeight/1.5);
+    cnv = createCanvas(1400,350);
     cnv.style('display', 'block');
 
     dino = new Dino();
@@ -47,7 +47,7 @@ function setup() {
 function draw() {
     scale(0.5);
 
-    cnv.position(windowWidth/4, 100,'fixed');
+    cnv.position(1200/4, 100,'fixed');
 
     background(256);
     land.show();
