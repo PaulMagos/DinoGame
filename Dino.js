@@ -6,7 +6,7 @@ stop = false;
 class Dino{
     constructor() {
         this.dim = 150;
-        this.x = 50 ;
+        this.x = 0 ;
         this.y = height - this.dim;
         this.velocityX = 0;
 
@@ -17,9 +17,11 @@ class Dino{
     }
 
     jump() {
-        if(!start) start = true;
         if(this.y == height - this.dim && !this.stop){
-            this.velocityX = -25;
+            if(start) this.velocityX = -25;
+        }
+        if(!start) {
+            start = true;
         }
     }
 
@@ -29,9 +31,19 @@ class Dino{
     }
 
     move() {
+        if(start) score += 0.25;
+        if(this.x != 50 && start) this.x+=1;
         this.y += this.velocityX;
         this.velocityX  += gravity;
         this.y = constrain(this.y, 0, height - this.dim);
+    }
+
+    hits(cactus){
+        let x1 = this.x + this.dim * 0.5;
+        let y1 = this.y + this.dim * 0.5;
+        let x2 = cactus.x + cactus.h * 0.5;
+        let y2 = cactus.y + cactus.h * 0.5;
+        return collideCircleCircle(x1, y1, this.dim-this.dim/1.5, x2, y2, cactus.h);
     }
 
     show() {
@@ -73,5 +85,6 @@ class Dino{
 
         fill(255,255,255);
         image(current_img, this.x, this.y, this.dim ,this.dim);
+
     }
 }

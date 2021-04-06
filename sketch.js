@@ -1,6 +1,7 @@
 let dino;
 let cactus;
 let land;
+
 let dinoImg;
 let dino_dead;
 let cactusImg;
@@ -13,17 +14,20 @@ let dino_downImg;
 let dino_rightImg;
 let dino_leftdownImg;
 let dino_rightdownImg;
+
 let score = 0;
+
+let rzs = 0.5;
 
 
 function preload(){
     dino_dead = loadImage('Images/dead_dino.png');
-    dinoImg = loadImage('Images/svg/dino_normal.svg');
-    dino_leftImg = loadImage('Images/svg/dino_leftfoot.svg');
-    dino_rightImg = loadImage('Images/svg/dino_rightfoot.svg');
-    dino_leftdownImg = loadImage('Images/svg/dino_downleft.svg');
-    dino_rightdownImg = loadImage('Images/svg/dino_downright.svg');
-    dino_downImg = loadImage('Images/svg/dino_down.svg');
+    dinoImg = loadImage('Images/dino_normal.png');
+    dino_leftImg = loadImage('Images/dino_leftfoot.png');
+    dino_rightImg = loadImage('Images/dino_rightfoot.png');
+    dino_leftdownImg = loadImage('Images/dino_downleft.png');
+    dino_rightdownImg = loadImage('Images/dino_downright.png');
+    dino_downImg = loadImage('Images/dino_down.png');
     cactusImg = loadImage('Images/cactus.png');
     cactusImg2 = loadImage('Images/cactus1.png');
     cactusImg3 = loadImage('Images/cactus2.png');
@@ -32,16 +36,16 @@ function preload(){
 }
 
 function setup() {
-    createCanvas(800,450);
+    createCanvas(1200,350);
+
     dino = new Dino();
-    cactus = new Cactus();
     land = new Land();
 }
 
 function draw() {
+
     background(256);
-    cactus.show();
-    cactus.move();
+    scale(0.8);
     land.show();
     land.move();
 
