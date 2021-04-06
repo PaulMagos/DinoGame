@@ -44,6 +44,11 @@ function setup() {
     land = new Land();
 }
 
+
+function touchStarted(){
+    dino.jump();
+}
+
 function draw() {
     scale(0.5);
 
